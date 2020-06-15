@@ -19,20 +19,24 @@
       </div>
       <div class="col-sm-12 mb-2">
         <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">抓粉絲團已按讚的用戶名稱</h5>
-            <p class="card-text mb-0 text-danger">使用限制：需要有該粉絲團的管理權限</p>
-            <p class="card-text mb-0">使用說明：</p>
-            <ol class="pl-4 pt-0 pb-0">
-              <li class="pt-1">將以下「抓粉絲」按鈕拖至瀏覽器的書籤列完成插件的安裝。</li>
-              <li class="pt-1">將想要抓取的粉絲團打開首頁。</li>
-              <li class="pt-1">點擊右上角的「設定」打開至粉絲團設定畫面。</li>
-              <li class="pt-1">點擊左邊的「用戶和其他粉絲專頁」打開至粉絲團的用戶和其他粉絲專頁畫面。</li>
-              <li class="pt-1">點擊瀏覽器書籤列中已安裝完成的「抓粉絲」書籤。</li>
-              <li class="pt-1">請等待片刻，資料抓取中畫面將會不停捲動。</li>
-              <li class="pt-1">等待跳出新分頁後，粉絲團已按讚的用戶名稱將會顯示在該頁面中。</li>
-              <li class="pt-1">分頁跳出後，原先的「用戶和其他粉絲專頁」頁面將會重新整理。</li>
-            </ol><a class="btn btn-primary" href="javascript: void (()=&gt;{let myVar=setInterval(()=&gt;{let loadingIcon=document .getElementById('content') .getElementsByClassName('img _55ym _55yq _55yo'); let moreData=[...loadingIcon].length !==0; scrollBy(0, outerHeight); if (!moreData){clearInterval(myVar); let arr=document.getElementsByClassName('_3cb8'); let arr1=[...arr]; let userDataHTML=arr1.map((e)=&gt; '&lt;p&gt;' + e.innerText + '&lt;/p&gt;'); let userDataHTMLText=userDataHTML.join(''); window.location.reload(''); open=window.open('about:blank', '_blank'); open.document.head.innerHTML='&lt;title&gt;抓粉絲｜Facebook 資訊收集小工具&lt;/title&gt;&lt;style&gt;p{margin: 0;}&lt;/style&gt;'; open.document.body.innerHTML=userDataHTMLText;}}, 2000);})();">抓粉絲</a>
+          <div class="card-body row">
+            <div class="col-lg-5 col-12"><img class="img-fluid" src="./抓粉絲.png" alt=""/></div>
+            <div class="col-lg-7 col-12">
+              <h5 class="pt-md-2 pt-4 card-title">抓粉絲團已按讚的用戶名稱</h5>
+              <p class="card-text mb-0 text-danger">使用限制：需要有該粉絲團的管理權限</p>
+              <p class="card-text mb-0">使用說明：</p>
+              <ol class="pl-4 pt-0 pb-0">
+                <li class="pt-1">將以下「抓粉絲」按鈕拖至瀏覽器的書籤列完成插件的安裝。</li>
+                <li class="pt-1">將想要抓取的粉絲團打開首頁。</li>
+                <li class="pt-1">點擊右上角的「設定」打開至粉絲團設定畫面。</li>
+                <li class="pt-1">點擊左邊的「用戶和其他粉絲專頁」打開至粉絲團的用戶和其他粉絲專頁畫面。</li>
+                <li class="pt-1">點擊瀏覽器書籤列中已安裝完成的「抓粉絲」書籤。</li>
+                <li class="pt-1">請等待片刻，資料抓取中畫面將會不停捲動。</li>
+                <li class="pt-1">等待跳出新分頁後，粉絲團已按讚的用戶名稱將會顯示在該頁面中。</li>
+                <li class="pt-1">分頁跳出後，原先的「用戶和其他粉絲專頁」頁面將會重新整理。</li>
+              </ol>
+              <a class="btn btn-primary" href="javascript: void (()=&gt;{let myVar=setInterval(()=&gt;{let loadingIcon=document .getElementById('content') .getElementsByClassName('img _55ym _55yq _55yo'); let moreData=[...loadingIcon].length !==0; scrollBy(0, outerHeight); if (!moreData){clearInterval(myVar); let arr=document.getElementsByClassName('_3cb8'); let arr1=[...arr]; let userDataHTML=arr1.map((e)=&gt; '&lt;p&gt;' + e.innerText + '&lt;/p&gt;'); let userDataHTMLText=userDataHTML.join(''); window.location.reload(''); open=window.open('about:blank', '_blank'); open.document.head.innerHTML='&lt;title&gt;抓粉絲｜Facebook 資訊收集小工具&lt;/title&gt;&lt;style&gt;p{margin: 0;}&lt;/style&gt;'; open.document.body.innerHTML=userDataHTMLText;}}, 2000);})();">抓粉絲</a>
+            </div>
           </div>
         </div>
       </div>
