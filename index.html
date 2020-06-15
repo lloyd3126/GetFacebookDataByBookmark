@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - 粉絲團抽獎插件</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav class="navbar-expand-lg navbar navbar-primary bg-primary"><a class="navbar-brand text-white">Facebook 資訊收集小工具</a></nav>
+<div class="container-fluid">
+  <div class="d-flex">
+    <div class="row p-2">
+      <div class="col-sm-12 mt-4 mb-2">
+        <h1>臉書粉絲團抽獎插件</h1>
+        <p>拖動以下的按鈕至瀏覽器的書籤列，即可完成插件的安裝。</p>
+      </div>
+      <div class="col-sm-12 mb-2">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">抓粉絲團已按讚的用戶名稱</h5>
+            <p class="card-text mb-0 text-danger">使用限制：需要有該粉絲團的管理權限</p>
+            <p class="card-text mb-0">使用說明：</p>
+            <ol class="pl-4 pt-0 pb-0">
+              <li class="pt-1">將以下「抓粉絲」按鈕拖至瀏覽器的書籤列完成插件的安裝。</li>
+              <li class="pt-1">將想要抓取的粉絲團打開首頁。</li>
+              <li class="pt-1">點擊右上角的「設定」打開至粉絲團設定畫面。</li>
+              <li class="pt-1">點擊左邊的「用戶和其他粉絲專頁」打開至粉絲團的用戶和其他粉絲專頁畫面。</li>
+              <li class="pt-1">點擊瀏覽器書籤列中已安裝完成的「抓粉絲」書籤。</li>
+              <li class="pt-1">請等待片刻，資料抓取中畫面將會不停捲動。</li>
+              <li class="pt-1">等待跳出新分頁後，粉絲團已按讚的用戶名稱將會顯示在該頁面中。</li>
+              <li class="pt-1">分頁跳出後，原先的「用戶和其他粉絲專頁」頁面將會重新整理。</li>
+            </ol><a class="btn btn-primary" href="javascript: void (()=&gt;{let myVar=setInterval(()=&gt;{let loadingIcon=document .getElementById('content') .getElementsByClassName('img _55ym _55yq _55yo'); let moreData=[...loadingIcon].length !==0; scrollBy(0, outerHeight); if (!moreData){clearInterval(myVar); let arr=document.getElementsByClassName('_3cb8'); let arr1=[...arr]; let userDataHTML=arr1.map((e)=&gt; '&lt;p&gt;' + e.innerText + '&lt;/p&gt;'); let userDataHTMLText=userDataHTML.join(''); window.location.reload(''); open=window.open('about:blank', '_blank'); open.document.head.innerHTML='&lt;title&gt;Get Facebook Fan Page User Data&lt;/title&gt;&lt;style&gt;p{margin: 0;}&lt;/style&gt;'; open.document.body.innerHTML=userDataHTMLText;}}, 2000);})();">抓粉絲</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 mb-2">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">抓貼文有公開分享的用戶名稱</h5>
+            <p class="card-text mb-0 text-danger">使用限制：不限是否有管理者權限，但僅限抓取有公開分享的用戶名稱</p>
+            <p class="card-text mb-0">使用說明：</p>
+            <ol class="pl-4 pt-0 pb-0">
+              <li class="pt-1">將以下「抓分享」按鈕拖至瀏覽器的書籤列完成插件的安裝。</li>
+              <li class="pt-1">打開想要抓取的貼文專屬頁面（不限是否為粉絲團貼文，個人貼文也允許）。</li>
+              <li class="pt-1">點擊貼文中的「Ｎ次分享」，以打開公開分享的用戶資訊頁。</li>
+              <li class="pt-1">點擊瀏覽器書籤列中已安裝完成的「抓分享」書籤。</li>
+              <li class="pt-1">請等待片刻，資料抓取中畫面將會不停捲動。</li>
+              <li class="pt-1">等待跳出新分頁後，有公開分享貼文的用戶名稱將會顯示在該頁面中。</li>
+              <li class="pt-1">分頁跳出後，原先的頁面將會重新整理，因此建議要抓取前務必點擊該貼文的時間文字，以連結至貼文專屬頁面。</li>
+            </ol><a class="btn btn-primary" href="javascript: void (()=&gt;{var myVar=setInterval(()=&gt;{let imgCollection=document.getElementsByTagName('IMG'); let arr=[...imgCollection].map((e)=&gt; e.src); let moreData=arr.indexOf( 'https://static.xx.fbcdn.net/rsrc.php/v3/yw/r/_2npUSCf6mV.gif' ) !==-1; scrollBy(0, outerHeight); if (!moreData){clearInterval(myVar); let arr=document .getElementById('repost_view_dialog') .getElementsByClassName('_7tae _14f3 _14f5 _5pbw _5vra'); let arr1=[...arr]; let userDataHTML=arr1.map((e)=&gt; '&lt;p&gt;' + e.innerText + '&lt;/p&gt;'); let userDataHTMLText=userDataHTML.join(''); window.location.reload(''); open=window.open('about:blank', '_blank'); open.document.title='Get Facebook Share User Data'; open.document.head.innerHTML='&lt;title&gt;Get Facebook Share User Data&lt;/title&gt;&lt;style&gt;p{margin: 0;}&lt;/style&gt;'; open.document.body.innerHTML=userDataHTMLText;}}, 1000);})();">抓分享</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 mb-2">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">抓貼文有留言的用戶名稱與留言</h5>
+            <p class="card-text mb-0 text-danger">使用限制：不限是否有管理者權限，但限抓取粉絲團的貼文</p>
+            <p class="card-text mb-0">使用說明：</p>
+            <ol class="pl-4 pt-0 pb-0">
+              <li class="pt-1">將以下「抓留言」按鈕拖至瀏覽器的書籤列完成插件的安裝。</li>
+              <li class="pt-1">打開粉絲團中想要抓取的貼文專屬頁面。</li>
+              <li class="pt-1">點擊貼文中的「Ｎ則留言」，以打開留言頁面。</li>
+              <li class="pt-1">點擊瀏覽器書籤列中已安裝完成的「抓分享」書籤。</li>
+              <li class="pt-1">請等待片刻，資料抓取中畫面將會不停捲動。</li>
+              <li class="pt-1">等待跳出新分頁後，有公開分享貼文的用戶名稱將會顯示在該頁面中。</li>
+              <li class="pt-1">分頁跳出後，原先的頁面將會重新整理，因此建議要抓取前務必點擊該貼文的時間文字，以連結至該貼文的專屬頁面。</li>
+            </ol><a class="btn btn-primary" href="javascript: void (()=&gt;{var myVar=setInterval(()=&gt;{let moredataBtnArr=document.querySelectorAll('a[data-ft*=Q]'); let moredataBtn=moredataBtnArr[moredataBtnArr.length - 1]; let moreData=moredataBtn.firstChild.firstChild.textContent==='查看更多留言'; if (moreData){moredataBtn.click();}else{clearInterval(myVar); let arr=document.querySelectorAll('div[data-ft*=K]'); let arr1=[...arr]; let arr2=[]; arr1.forEach((e)=&gt;{let username=e.firstChild.firstChild.innerText; let comment=e.firstChild.lastChild.innerText; if (username !=undefined &amp;&amp; username !='作者'){arr2.push({username, comment});}}); let userDataHTML=arr2.map( (e)=&gt; '&lt;p&gt;' + e.username + ': ' + e.comment + '&lt;/p&gt;' ); let userDataHTMLText=userDataHTML.join(''); window.location.reload(''); open=window.open('about:blank', '_blank'); open.document.head.innerHTML='&lt;title&gt;Get Facebook Commit User Data&lt;/title&gt;&lt;style&gt;p{margin: 0;}&lt;/style&gt;'; open.document.body.innerHTML=userDataHTMLText;}}, 1000);})();">抓留言</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.2/umd/popper.min.js'></script>
+</body>
+</html>
